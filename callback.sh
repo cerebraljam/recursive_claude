@@ -7,10 +7,10 @@ if [ -z ${PREV_SESSION_NAME} ]; then
   exit 0
 fi
 
-if [ -z "$MESSAGE_NAME" ]; then
-    message="${SESSION_NAME} is done"
+if [ -z "$MESSAGE" ]; then
+    MESSAGE="${SESSION_NAME} is done"
 fi
 
-echo Signalling 
-tmux send-keys -t $PREV_SESSION_NAME "$message"
-tmux send-keys -t $PREV_SESSION_NAME Enter
+echo "Signalling $PREV_SESSION_NAME with message: $MESSAGE"
+tmux send-keys -t $PREV_SESSION_NAME "$MESSAGE"
+sleep 1; tmux send-keys -t $PREV_SESSION_NAME Enter

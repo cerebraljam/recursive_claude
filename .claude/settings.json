@@ -9,7 +9,9 @@
       "Bash(tmux list-sessions:*)",
       "Bash(tmux kill-session:*)",
       "Bash(tmux capture-pane:*)",
-      "Bash(tmux send-keys:*)"
+      "Bash(tmux send-keys:*)",
+      "WebSearch",
+      "WebFetch"
     ],
     "deny": []
   }
